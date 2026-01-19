@@ -21,6 +21,10 @@ a {
   padding: 20px 0;
 }
 
+
+/* navbar */
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -34,11 +38,11 @@ a {
 
 .gradient-span {
   display: inline-block;
-  background: linear-gradient(
+   background: linear-gradient(
         190deg,
     rgba(145, 0, 248, 1),
-    rgba(251, 9, 180, 1),
-    rgb(242, 229, 85)
+    rgb(252, 6, 178),
+    rgb(249, 230, 18)
   );
    background-clip: text;
   -webkit-background-clip: text;
@@ -56,17 +60,115 @@ a {
   display: none;
   width: 24px;
 }
-.nav-btn {
+ button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-gradient {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
-  background: linear-gradient(190deg,rgba(145, 0, 248, 1),
-                                    rgba(251, 9, 180, 1),
-                                    rgb(242, 229, 85) );
+  background: linear-gradient(
+        190deg,
+    rgba(145, 0, 248, 1),
+    rgb(252, 6, 178),
+    rgb(249, 230, 18)
+  );
   padding: 10px 20px;
   border-radius: 999px;
   border:none;
 }
+
+.header-divider{
+  margin:1px;
+  height: 1px;
+  background-color: white;
+  opacity: 0.2;
+}
+
+
+
+/* hero section */
+.hero {
+  background: url("assets/hero-bg.png") center/cover no-repeat;
+  padding: 100px 0;
+  text-align: center;
+
+}
+
+.hero-circle {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border:6px solid #2A186C;
+  background: linear-gradient(
+        190deg,
+    rgba(145, 0, 248, 1),
+    rgb(252, 6, 178),
+    rgb(249, 230, 18)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-circle img {
+  width: 90px;
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  background: #2cff9a;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  max-width: 520px;
+  margin: 0 auto 32px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(207, 203, 233, 0.85);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+
+.hero-buttons img {
+  width: 18px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid #2cff9a;
+  color: #2cff9a;
+}
+
+
 
 
 
@@ -83,6 +185,7 @@ a {
     display: block;
     cursor:pointer;
   }
+
 
 }
 
