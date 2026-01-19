@@ -55,7 +55,30 @@ a {
   gap: 30px;
   font-size: 16px;
 }
+.nav-menu a {
+  position: relative;
+  padding-bottom: 4px;
+}
 
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    190deg,
+    rgba(145, 0, 248, 1),
+    rgb(252, 6, 178),
+    rgb(249, 230, 18)
+  );
+  transition: width 1s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
 .hamburger {
   display: none;
   width: 24px;
@@ -84,6 +107,19 @@ a {
   padding: 10px 20px;
   border-radius: 999px;
   border:none;
+  transition: background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+        40deg,
+    rgba(145, 0, 248, 1),
+    rgb(252, 6, 178),
+    rgb(249, 230, 18)
+  );
+  
 }
 
 .header-divider{
@@ -98,14 +134,14 @@ a {
 /* hero section */
 .hero {
   background: url("assets/hero-bg.png") center/cover no-repeat;
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
 
 }
 
 .hero-circle {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   margin: 0 auto;
   border-radius: 50%;
   border:6px solid #2A186C;
@@ -119,8 +155,14 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
+  animation: heroCircleFloat 3s ease-in-out infinite;
 }
 
+@keyframes heroCircleFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
 .hero-circle img {
   width: 90px;
 }
@@ -135,20 +177,36 @@ a {
   font-weight: 700;
   padding: 6px 12px;
   border-radius: 999px;
+  animation: badgeAnimation 2s infinite;
 }
+@keyframes badgeAnimation {
+ 0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(44, 255, 154, 0.6);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(44, 255, 154, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(33, 200, 120, 0.667);
+  }
+}
+
 .hero h1 {
   font-size: 52px;
   font-weight: 700;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 12px;
 }
 
 .hero p {
-  max-width: 520px;
   margin: 0 auto 32px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: rgba(207, 203, 233, 0.85);
+  font-size: 16px;
+  line-height: 1.4;
+  color: white;
+  opacity: 0.8;
 }
 
 .hero-buttons {
@@ -166,8 +224,14 @@ a {
   background: transparent;
   border: 1.5px solid #2cff9a;
   color: #2cff9a;
+  transition: 
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
-
+.btn-outline:hover {
+  background-color: rgba(44, 255, 154, 0.15);
+  transform: translateY(-2px);
+}
 
 
 
@@ -185,7 +249,22 @@ a {
     display: block;
     cursor:pointer;
   }
-
-
+  .hero-circle {
+  width: 220px;
+  height: 220px;
+  }
+  .hero-circle img {
+  width: 60px;
+}
+.hero h1 {
+  font-size: 42px;
+}
+.hero p {
+  margin: 0 30px 32px;
+}
+.badge {
+  top: 12px;
+  right:0px;
+}
 }
 
