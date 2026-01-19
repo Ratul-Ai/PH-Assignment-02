@@ -277,7 +277,6 @@ a {
 .about-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 80px;
   align-items: start;
   text-align: center;
 }
@@ -319,6 +318,9 @@ a {
     display: block;
     cursor:pointer;
   }
+
+  /* hero part */
+
   .hero-circle {
   width: 220px;
   height: 220px;
@@ -336,5 +338,50 @@ a {
   top: 12px;
   right:0px;
 }
+ 
+/* about part */
+ .about {
+    padding: 40px 0 80px;
+  }
+
+  .writing-part {
+    max-width:95%;
+    margin: 0 auto;
+    
+  }
+
+  .writing-part h2 {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    line-height: 1.7;
+    
+  }
+
+  .about-text span {
+    margin-top: 14px;
+  }
+
+  .about-divider {
+    margin: 40px 0;
+  }
+
+  .about-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px; 
+  }
+
+  .about-card h3 {
+    font-size: 34px;
+  }
+
+  .about-card span {
+    font-size: 11px;
+    letter-spacing: 0.8px;
+  }
+
 }
 
