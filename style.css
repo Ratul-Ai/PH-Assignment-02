@@ -5,7 +5,7 @@
 }
 body {
   font-family: Arial, sans-serif;
-  background: #1A0B2E;
+  background: #1a0b2e;
   color: #fff;
 }
 .container {
@@ -21,14 +21,13 @@ a {
   padding: 20px 0;
 }
 
-
 /* navbar */
-
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background:#1A0B2E;
 }
 
 .logo {
@@ -38,17 +37,16 @@ a {
 
 .gradient-span {
   display: inline-block;
-   background: linear-gradient(
-        190deg,
+  background: linear-gradient(
+    190deg,
     rgba(145, 0, 248, 1),
     rgb(252, 6, 178),
     rgb(249, 230, 18)
   );
-   background-clip: text;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 .nav-menu {
   display: flex;
@@ -83,7 +81,7 @@ a {
   display: none;
   width: 24px;
 }
- button {
+button {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -95,48 +93,45 @@ a {
 }
 
 .btn-gradient {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
   background: linear-gradient(
-        190deg,
+    190deg,
     rgba(145, 0, 248, 1),
     rgb(252, 6, 178),
     rgb(249, 230, 18)
   );
   padding: 10px 20px;
   border-radius: 999px;
-  border:none;
-  transition: background-color 0.25s ease,
+  border: none;
+  transition:
+    background-color 0.25s ease,
     transform 0.25s ease;
 }
 
 .btn-gradient:hover {
   transform: translateY(-2px);
   background: linear-gradient(
-        40deg,
+    40deg,
     rgba(145, 0, 248, 1),
     rgb(252, 6, 178),
     rgb(249, 230, 18)
   );
-  
 }
 
-.header-divider{
-  margin:1px;
+.header-divider {
+  margin: 1px;
   height: 1px;
   background-color: white;
   opacity: 0.2;
 }
-
-
 
 /* hero section */
 .hero {
   background: url("assets/hero-bg.png") center/cover no-repeat;
   padding: 80px 0;
   text-align: center;
-
 }
 
 .hero-circle {
@@ -144,9 +139,9 @@ a {
   height: 300px;
   margin: 0 auto;
   border-radius: 50%;
-  border:6px solid #2A186C;
+  border: 6px solid #2a186c;
   background: linear-gradient(
-        190deg,
+    190deg,
     rgba(145, 0, 248, 1),
     rgb(252, 6, 178),
     rgb(249, 230, 18)
@@ -159,9 +154,15 @@ a {
 }
 
 @keyframes heroCircleFloat {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .hero-circle img {
   width: 90px;
@@ -180,7 +181,7 @@ a {
   animation: badgeAnimation 2s infinite;
 }
 @keyframes badgeAnimation {
- 0% {
+  0% {
     transform: scale(1);
     box-shadow: 0 0 0 rgba(44, 255, 154, 0.6);
   }
@@ -215,7 +216,6 @@ a {
   gap: 16px;
 }
 
-
 .hero-buttons img {
   width: 18px;
 }
@@ -224,7 +224,7 @@ a {
   background: transparent;
   border: 1.5px solid #2cff9a;
   color: #2cff9a;
-  transition: 
+  transition:
     background-color 0.25s ease,
     transform 0.25s ease;
 }
@@ -233,11 +233,11 @@ a {
   transform: translateY(-2px);
 }
 
-
-/* About the podcast */
+/* About the podcast part */
 
 .about {
   padding: 50px 0 120px;
+  background:#1A0B2E;
 }
 
 .writing-part {
@@ -264,7 +264,6 @@ a {
   opacity: 0.9;
 }
 
-
 .about-divider {
   width: 100%;
   height: 1px;
@@ -272,7 +271,6 @@ a {
   background-color: white;
   opacity: 0.2;
 }
-
 
 .about-cards {
   display: grid;
@@ -290,7 +288,7 @@ a {
 .about-card h3 {
   font-size: 48px;
   font-weight: 700;
-  color: #00FF88;
+  color: #00ff88;
   margin-bottom: 8px;
   line-height: 1;
 }
@@ -303,10 +301,85 @@ a {
   line-height: 1.2;
 }
 
+/* Features-part */
+
+
+.features {
+  padding: 120px 0;
+  background:#230E3D;
+}
+
+.features-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "audio mobile mobile"
+    "audio global global"
+    "interview interview resources";
+  gap: 30px;
+}
+
+.feature-card {
+  background: #351165; 
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+
+.card-audio {
+  grid-area: audio;
+}
+
+.card-mobile {
+  grid-area: mobile;
+}
+
+.card-global {
+  grid-area: global;
+}
+
+.card-interview {
+  grid-area: interview;
+}
+
+.card-resources {
+  grid-area: resources;
+}
+
+
+.feature-card img {
+  width: 40px;
+  margin-bottom: 6px;
+}
+
+
+.feature-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.feature-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.6;
+}
+
 
 /* media query */
-@media screen and (max-width: 576px){
-  .nav-menu{
+@media screen and (max-width: 576px) {
+  .nav-menu {
     display: none;
   }
 
@@ -316,38 +389,41 @@ a {
 
   .hamburger {
     display: block;
-    cursor:pointer;
+    cursor: pointer;
   }
 
   /* hero part */
 
+  .hero {
+    background: url("assets/hero-bg-2.png") center/cover no-repeat;
+  }
+
   .hero-circle {
-  width: 220px;
-  height: 220px;
+    width: 220px;
+    height: 220px;
   }
   .hero-circle img {
-  width: 60px;
-}
-.hero h1 {
-  font-size: 42px;
-}
-.hero p {
-  margin: 0 30px 32px;
-}
-.badge {
-  top: 12px;
-  right:0px;
-}
- 
-/* about part */
- .about {
+    width: 60px;
+  }
+  .hero h1 {
+    font-size: 42px;
+  }
+  .hero p {
+    margin: 0 30px 32px;
+  }
+  .badge {
+    top: 12px;
+    right: 0px;
+  }
+
+  /* about part */
+  .about {
     padding: 40px 0 80px;
   }
 
   .writing-part {
-    max-width:95%;
+    max-width: 95%;
     margin: 0 auto;
-    
   }
 
   .writing-part h2 {
@@ -358,7 +434,6 @@ a {
   .about-text {
     font-size: 14px;
     line-height: 1.7;
-    
   }
 
   .about-text span {
@@ -371,7 +446,7 @@ a {
 
   .about-cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 24px; 
+    gap: 40px 24px;
   }
 
   .about-card h3 {
@@ -383,5 +458,34 @@ a {
     letter-spacing: 0.8px;
   }
 
-}
+    /* feature-part */
 
+   .features {
+    padding: 80px 0;
+  }
+
+  .features-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "audio"
+      "mobile"
+      "global"
+      "interview"
+      "resources";
+    gap: 24px;
+  }
+
+  .feature-card {
+    padding: 28px;
+  }
+
+  .feature-text h3 {
+    font-size: 22px;
+  }
+
+}
