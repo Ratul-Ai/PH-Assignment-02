@@ -376,7 +376,7 @@ button {
 
 .episodes {
   padding: 120px 0;
-  background: #1A0B2E;
+  background: #1a0b2e;
 }
 
 .episodes-title {
@@ -393,7 +393,7 @@ button {
 }
 
 .episode-card {
-  background: #250D44;
+  background: #250d44;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -431,14 +431,13 @@ button {
   opacity: 0.6;
 }
 
-
 .episode-time {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 6px;
   font-size: 16px;
-  color: #00FF88; 
+  color: #00ff88;
 }
 
 .episode-time img {
@@ -446,10 +445,76 @@ button {
   height: 16px;
 }
 
+/* Host part  */
 
+.host {
+  padding: 0 0 120px;
+  background: #1a0b2e;
+}
 
+.host-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
 
+.host-card {
+  background: #250d44;
+  border-radius: 40px;
+  padding: 48px 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
 
+.host-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.host-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.host-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.6;
+}
+
+.host-socials {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.host-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #9649bd;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.host-socials a:hover {
+  transform: translateY(-2px);
+  background: #130623;
+}
+
+.host-socials img {
+  width: 16px;
+}
 
 /* media query */
 @media screen and (max-width: 576px) {
@@ -588,5 +653,42 @@ button {
 
   .episode-content p {
     font-size: 16px;
+  }
+
+  /* Host-part  */
+
+  .host {
+    padding: 80px 0;
+  }
+
+  .host-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .host-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+    border-radius: 24px;
+    gap: 28px;
+  }
+
+  .host-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .host-content h3 {
+    font-size: 24px;
+  }
+
+  .host-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .host-socials {
+    justify-content: center;
   }
 }
