@@ -685,7 +685,7 @@ button {
 
   .episodes-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
   }
 
   .episode-content {
