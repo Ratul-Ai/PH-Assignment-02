@@ -27,7 +27,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background:#1A0B2E;
+  background: #1a0b2e;
 }
 
 .logo {
@@ -237,7 +237,7 @@ button {
 
 .about {
   padding: 50px 0 120px;
-  background:#1A0B2E;
+  background: #1a0b2e;
 }
 
 .writing-part {
@@ -303,10 +303,9 @@ button {
 
 /* Features-part */
 
-
 .features {
   padding: 120px 0;
-  background:#230E3D;
+  background: #230e3d;
 }
 
 .features-title {
@@ -327,7 +326,7 @@ button {
 }
 
 .feature-card {
-  background: #351165; 
+  background: #351165;
   border-radius: 24px;
   padding: 32px;
   display: flex;
@@ -335,7 +334,6 @@ button {
   justify-content: center;
   gap: 14px;
 }
-
 
 .card-audio {
   grid-area: audio;
@@ -357,12 +355,10 @@ button {
   grid-area: resources;
 }
 
-
 .feature-card img {
   width: 40px;
   margin-bottom: 6px;
 }
-
 
 .feature-text h3 {
   font-size: 24px;
@@ -375,6 +371,84 @@ button {
   line-height: 1.6;
   opacity: 0.6;
 }
+
+/* Episode-part */
+
+.episodes {
+  padding: 120px 0;
+  background: #1A0B2E;
+}
+
+.episodes-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.episode-card {
+  background: #250D44;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.episode-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.episode-thumb iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.episode-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.episode-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.episode-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.6;
+}
+
+
+.episode-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 16px;
+  color: #00FF88; 
+}
+
+.episode-time img {
+  width: 16px;
+  height: 16px;
+}
+
+
+
+
 
 
 /* media query */
@@ -458,9 +532,9 @@ button {
     letter-spacing: 0.8px;
   }
 
-    /* feature-part */
+  /* feature-part */
 
-   .features {
+  .features {
     padding: 80px 0;
   }
 
@@ -488,4 +562,31 @@ button {
     font-size: 22px;
   }
 
+  /* Episode-part */
+
+  .episodes {
+    padding: 40px 0;
+  }
+
+  .episodes-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .episodes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .episode-content {
+    padding: 20px;
+  }
+
+  .episode-content h3 {
+    font-size: 20px;
+  }
+
+  .episode-content p {
+    font-size: 16px;
+  }
 }
