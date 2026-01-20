@@ -53,29 +53,19 @@ a {
   gap: 30px;
   font-size: 16px;
 }
+
 .nav-menu a {
-  position: relative;
-  padding-bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color:#ffffff;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.nav-menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(
-    190deg,
-    rgba(145, 0, 248, 1),
-    rgb(252, 6, 178),
-    rgb(249, 230, 18)
-  );
-  transition: width 1s ease;
-}
-
-.nav-menu a:hover::after {
-  width: 100%;
+.nav-menu a:hover {
+  color:rgb(211, 14, 211);
+  transform: translateY(-2px);
 }
 .hamburger {
   display: none;
@@ -516,6 +506,61 @@ button {
   width: 16px;
 }
 
+.footer {
+  background:
+    url("assets/footer-bg.png") center / cover no-repeat;
+  padding: 120px 0;
+}
+
+.footer-inner {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.footer-socials a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.footer-socials img {
+  width: 24px;
+}
+
+.footer-copy {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+
+
+
+
+
 /* media query */
 @media screen and (max-width: 576px) {
   .nav-menu {
@@ -691,4 +736,26 @@ button {
   .host-socials {
     justify-content: center;
   }
+
+  /* footer-part */
+
+  .footer {
+    background:url("assets/footer-bg-2.png") center / cover no-repeat;
+    padding: 40px 0 68px;
+  }
+
+  .footer-logo {
+    font-size: 40px;
+    margin-bottom:24px;
+  }
+
+  .footer-socials {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 250px;
+    margin: 0 auto 24px;
+  }
+
+  
 }
