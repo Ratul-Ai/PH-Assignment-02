@@ -8,6 +8,7 @@ body {
   background: #1a0b2e;
   color: #fff;
 }
+/* scroll  */
 html{
   scroll-behavior: smooth;
 }
